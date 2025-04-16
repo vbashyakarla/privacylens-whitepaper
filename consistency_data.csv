@@ -1,0 +1,100 @@
+site,domain_name,chat_gpt_score,gemini_score,gemini_version
+https://www.nlm.nih.gov/web_policies.html,National Library of Medicine,54,31,gemini_2.0_flash
+https://niddk.nih.gov/privacy-policy,National Institute of Diabetes and Digestive and Kidney Diseases,48,31,gemini_2.0_flash
+https://mayoclinic.org/about-this-site/privacy-policy,MayoClinic,66,62,gemini_2.0_flash
+https://foundation.wikimedia.org/wiki/Policy:Privacy_policy,Wikimedia,58,52,gemini_2.0_flash
+https://betterhealth.vic.gov.au/about/privacy,Betterhealth,44,52,gemini_2.0_flash
+https://www.healthdirect.gov.au/privacy-policy-public,Health Direact Au,68,37,gemini_2.0_flash
+https://www.diabetesaustralia.com.au/privacy-policy/,Diabetes Australia,13,38,gemini_2.0_flash
+https://who.int/about/policies/privacy,World Health Organization,29,31,gemini_2.0_flash
+https://aihw.gov.au/about-us/privacy-policy,Aus Institute of Health and Wellfare,32,38,gemini_2.0_flash
+https://my.clevelandclinic.org/about/website/privacy-security,Clevelend Clinic,60,39,gemini_2.0_flash
+https://health.gov.au/using-our-websites/website-privacy-policy,Australian Governemt of Health and Age Care,60,38,gemini_2.0_flash
+https://abs.gov.au/website-privacy-copyright-and-disclaimer#copyright-and-creative-commons,Australian Bureau of Statistics,26,31,gemini_2.0_flash
+https://diabetesvic.org.au/privacy-policy/,Diabeter Victoria,54,38,gemini_2.0_flash
+https://www.ndss.com.au/privacy-policy/,National Diabetes Services Scheme,52,38,gemini_2.0_flash
+https://idf.org/privacy-policy/,International Diabetes Federation,53,36,gemini_2.0_flash
+https://www.healthline.com/privacy-policy,Healthline,64,64,gemini_2.0_flash
+https://diabetes.org/about-us/policies/privacy-policy,ADA,58,64,gemini_2.0_flash
+https://www.victorchang.edu.au/privacy-policy,Victor Chang Cardiac Research Institute,55,64,gemini_2.0_flash
+https://www.nlm.nih.gov/web_policies.html?_ga=2.126497098.695772685.1743254073-1072980819.1743254073&_gl=1*1sczq1x*_ga*MTA3Mjk4MDgxOS4xNzQzMjU0MDcz*_ga_P1FPTH9PL4*MTc0MzI1NDA3My4xLjAuMTc0MzI1NDA3My4wLjAuMA..*_ga_7147EPK006*MTc0MzI1NDA3My4xLjAuMTc0MzI1NDA3My4wLjAuMA..,National Library of Medicine,63,64,gemini_2.0_flash
+https://www.cdc.gov/other/privacy.html,CDC,58,64,gemini_2.0_flash
+https://baker.edu.au/privacy-policy,Baker Institute,60,61,gemini_2.0_flash
+https://www.england.nhs.uk/privacy-policy/,NHS England,39,61,gemini_2.0_flash
+https://111.nhs.uk/Help/Privacy,NHS 111,55,61,gemini_2.0_flash
+https://www.gov.uk/help/privacy-notice,GOV.UK,50,59,gemini_2.0_flash
+https://ebsco.com/company/privacy-policy,EBSCO,62,60,gemini_2.0_flash
+https://www.medline.com.au/privacy/,Medline Australia,39,60,gemini_2.0_flash
+https://wolterskluwer.com/en/privacy-cookies,Wolters Kluwer,56,60,gemini_2.0_flash
+https://www.gsa.gov/website-information/website-policies#privacy,GSA,39,58,gemini_2.0_flash
+https://www.elsevier.com/legal/privacy-policy,Elsevier Legal,50,62,gemini_2.0_flash
+https://link.springer.com/privacystatement,SpringerLink,67,60,gemini_2.0_flash
+https://www.healthgrades.com/content/privacy-policy,Healthgrades,67,62,gemini_2.0_flash
+https://www.dotdashmeredith.com/brands-privacy,Dotdash Meredith,66,52,gemini_2.0_flash
+https://pennmedicine.org/for-patients-and-visitors/patient-information/hipaa-and-privacy,Penn Medicine,37,52,gemini_2.0_flash
+https://www.goodrx.com/about/privacy-policy,Goodrx,60,62,gemini_2.0_flash
+https://www.medicalnewstoday.com/about/privacy-policy,Medical News Today,64,62,gemini_2.0_flash
+https://www.hse.ie/eng/privacy-statement/,HSE.ie,50,62,gemini_2.0_flash
+https://www.hearst.com/-/us-magazines-privacy-notice,HEARST,64,52,gemini_2.0_flash
+https://newsinhealth.nih.gov/privacy,News In Health,17,52,gemini_2.0_flash
+https://www.keckmedicine.org/privacy-policy/,Keck Medicine,32,62,gemini_2.0_flash
+https://www.medicinenet.com/privacy_policy/info.htm,Medicine Net,62,52,gemini_2.0_flash
+https://www.everydayhealth.com/privacyterms/#everyday_health_privacy_policy,Everyday Health,62,52,gemini_2.0_flash
+https://www.webmd.com/about-webmd-policies/about-privacy-policy,WebMD,67,57,gemini_deep_research
+https://www.sanforddermatology.com/your-privacy,Sanford Dermatology,24,57,gemini_deep_research
+https://www.drugwatch.com/privacy-policy/,Drugwatch,44,59,gemini_deep_research
+https://www.aocd.org/page/PrivacyPolicy,American Osteopathic College of Dermatology,26,54,gemini_2.5_pro
+https://www.emedicinehealth.com/privacy_policy/info.htm,EMedicineHealth,67,62,gemini_2.5_pro
+https://www.mountsinai.org/privacy,Mount Sinai,45,60,gemini_2.5_pro
+https://mind.org.uk/legal-info/privacy-policy/,Mind,52,64,gemini_2.5_pro
+https://beyondblue.org.au/general/privacy-policy,Beyond Blue,68,60,gemini_2.5_pro
+https://kidshealth.org/en/parents/policy.html,Kids Health,34,50,gemini_deep_research
+https://www.nhsinform.scot/privacy-and-cookies-policy/,NHS Inform,62,49,gemini_deep_research
+https://nimh.nih.gov/site-info/privacy-policy,National Institute of Mental Health,43,49,gemini_deep_research
+https://www.cope.org.au/privacy-policy,COPE,45,49,gemini_deep_research
+https://ama-assn.org/about/privacy-policy,American Medical Association,60,49,gemini_deep_research
+https://helpguide.org/privacy-policy,HelpGuide,46,27,gemini_2.0_flash_thinking
+https://it.johnshopkins.edu/policies/privacystatement,IT at Hopkins,46,29,gemini_2.0_flash_thinking
+https://childline.org.uk/legal/privacy-policy/,Childline,53,38,gemini_2.0_flash_thinking
+https://adaa.org/privacy-policy,Anxiety and Depression Association,44,34,gemini_2.0_flash_thinking
+https://headspace.org.au/eheadspace-privacy-policy/,Headspace,31,42,gemini_2.0_flash_thinking
+https://blackdoginstitute.org.au/privacy-policy/,Black Dog Institute,54,36,gemini_2.0_flash_thinking
+https://au.reachout.com/our-policies/privacy-policy,Reachout Australia,62,36,gemini_2.0_flash_thinking
+https://healthhub.sg/privacy-policy,HealthHub,60,42,gemini_2.0_flash_thinking
+https://positivepsychology.com/privacy-policy/,PositivePsychology,47,39,gemini_2.0_flash_thinking
+https://thiswayup.org.au/privacy-policy/,This Way Up,10,43,gemini_2.0_flash_thinking
+https://stapsychology.com/privacy-policy/,ST&A Psychology,25,30,gemini_2.0_flash_thinking
+https://ucihealth.org/website-privacy-policy,UCI Health,51,41,gemini_2.0_flash_thinking
+https://getmosh.com.au/privacy,Mosh,58,42,gemini_2.0_flash_thinking
+https://www.whattoexpect.com/privacy-policy#health-data-policy,Getting Pregnant What To Expect,67,59,gemini_2.0_flash_thinking
+https://medparkhospital.com/page/privacy-policy,Medpark Hospital - Thai,49,34,gemini_2.0_flash_thinking
+https://flo.health/privacy-policy,Flo,61,62,gemini_2.0_flash_thinking
+https://attiliodalberto.com/privacy-notice.php,Dr (TCM) Attilio D'Alberto,56,26,gemini_2.0_flash_thinking
+https://www.upmc.com/patients-visitors/privacy-info/terms-of-use,UPMC,62,33,gemini_2.0_flash_thinking
+https://myhealth.alberta.ca/Pages/Privacy-Statement.aspx,MyHealth Alberta,47,29,gemini_2.0_flash_thinking
+https://au.clearblue.com/privacy-policy,Clearblue,52,32,gemini_2.0_flash_thinking
+https://www.tommys.org/about-us/tommys-policies/tommys-data-protection-and-privacy-policy,Tommys,52,40,gemini_2.0_flash_thinking
+https://ssmhealth.com/notice-privacy-practices,SSM Health,49,36,gemini_2.0_flash_thinking
+https://aptaclub.co.uk/privacy-policy.html,Aptamil,63,33,gemini_2.0_flash_thinking
+https://americanpregnancy.org/privacy-policy/,American Pregnancy Association,25,41,gemini_2.0_flash_thinking
+https://stardiscountchemist.com.au/privacy-policy,Star Discount Au,50,46,gemini_2.0_flash_thinking
+https://nuhs.edu.sg/privacy,NUHS,21,42,gemini_2.0_flash_thinking
+https://pregnancyparenting.org.au/our-privacy-policy,Pregnancy to Parenting Australia,23,29,gemini_2.0_flash_thinking
+https://healthify.nz/about-healthify/our-policies#privacy-cookies,Healthify,23,21,gemini_2.0_flash_thinking
+https://www.mdanderson.org/about-md-anderson/business-legal/legal-and-policy/legal-statements/privacy-policy.html,MD Anderson Cancer Center,56,32,gemini_2.0_flash_thinking
+https://stamfordhealth.org/webprivacy/,Stamford Health,56,32,gemini_2.0_flash_thinking
+https://massgeneralbrigham.org/en/notices,Mass General Brigham,41,35,gemini_2.0_flash_thinking
+https://diabetes.org.uk/legal-information/privacy-policy1,Diabetes UK,65,53,gemini_2.0_flash_thinking
+https://mfm.au/privacy-policy/,Melbourne Functional Medicine,63,41,gemini_2.0_flash_thinking
+https://www.gradyhealth.org/privacy/,Grady Health,46,46,gemini_2.0_flash_thinking
+https://khealth.com/privacy-policy/,K Health,58,55,gemini_2.0_flash_thinking
+https://diatribe.org/privacy-policy,DiaTribe,42,40,gemini_2.0_flash_thinking
+https://www.ndtv.com/convergence/ndtv/new/privacy_policy.aspx#pfrom=home-ndtv_footer,NDTV,38,39,gemini_2.0_flash_thinking
+https://felixhospital.com/privacy-policy,Felix Hospital,41,42,gemini_2.0_flash_thinking
+https://abbott.com/privacy-policy.html,Abbott,66,42,gemini_2.0_flash_thinking
+https://www.va.gov/privacy-policy/,Veterans Affairs,40,38,gemini_2.0_flash_thinking
+https://rosewellness.com/privacy-policy/,Rose Wellness,51,38,gemini_2.0_flash_thinking
+https://thediabeteskitchen.com.au/policies/privacy-policy,The Diabetes Kitchen,35,31,gemini_2.0_flash_thinking
+https://nutritionaustralia.org/privacy-policy,Nutrition Australia,16,34,gemini_2.0_flash_thinking
+https://www.ucla.edu/terms-of-use,UCLA Med School,36,22,gemini_2.0_flash_thinking
+https://timesofindia.indiatimes.com/privacy-policy/cookiepolicy/86934312.cms,Times of India,50,40,gemini_2.0_flash_thinking
