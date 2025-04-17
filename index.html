@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title> Consistency Assessment and Gemini Evaluation</title>
+<title>Consistency Assessment and Gemini Evaluation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -88,36 +88,7 @@ window.Quarto = {
 
 <body>
 
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title"><p><img src="pl_logo.png" class="img-fluid" style="width:80.0%"> Consistency Assessment and Gemini Evaluation</p></h1>
-                      </div>
-  </div>
-    
-  <div class="quarto-title-meta-author">
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-heading">Affiliation</div>
-    
-      <div class="quarto-title-meta-contents">
-      <p class="author">The PrivacyLens Team </p>
-    </div>
-    <div class="quarto-title-meta-contents">
-          <p class="affiliation">
-              School of Information, UC Berkeley
-            </p>
-        </div>
-    </div>
-
-  <div class="quarto-title-meta">
-
-        
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
@@ -141,44 +112,41 @@ window.Quarto = {
   </ul>
 </nav>
 </div>
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Consistency Assessment and Gemini Evaluation</h1>
+</div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">The PrivacyLens Team </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            School of Information, UC Berkeley
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
 
 
+</header>
 
-<div class="cell" data-hide="true">
-<style type="text/css">
-<!-- .quarto-title-block { -->
-<!-- background-color: #123445; -->
-<!-- padding: 20px; -->
-<!-- border-radius: 5px; -->
-<!-- } -->
-</style>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>here() starts at /Users/vkb/Dropbox/Varoon_Files/git/privacylens-whitepaper</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Linking to ImageMagick 6.9.12.93
-Enabled features: cairo, fontconfig, freetype, heic, lcms, pango, raw, rsvg, webp
-Disabled features: fftw, ghostscript, x11</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::combine() masks gridExtra::combine()
-✖ dplyr::filter()  masks stats::filter()
-✖ dplyr::lag()     masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-</div>
+
+<p><img src="pl_logo.png" class="img-fluid" style="width:40.0%"></p>
 <div style="page-break-after: always;"></div>
 <section id="executive-summary" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="executive-summary"><span class="header-section-number">1</span> Executive Summary</h2>
@@ -245,18 +213,6 @@ Explain why we chose to focus on unique domains
 <h3 data-number="4.1" class="anchored" data-anchor-id="llm-consistency-results-chat-gpt-vs.-gemini"><span class="header-section-number">4.1</span> LLM Consistency Results: Chat GPT vs.&nbsp;Gemini</h3>
 <p>The sample of domains used in this analysis deviates strongly from random. As <a href="#fig-dist" class="quarto-xref">Figure&nbsp;1</a> shows, the distribution of domain scores is even (i.e,. <span class="math inline">\(\frac{1}{3}\)</span> assigned to each category weak, moderate, and strong). Based on the data shown in the plot of scores by model alone (right), it appears as if Chat GPT scores websites more leniently. The proportion of domains scored <code>weak</code> by Gemini (about 38%) is distinctly in the scores output by Gemini relative to those of Chat GPT (about 24%).</p>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 99 Columns: 5
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (3): site, domain_name, gemini_version
-dbl (2): chat_gpt_score, gemini_score
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-</div>
-<div class="cell">
 <div class="cell-output-display">
 <div id="fig-dist" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -287,12 +243,6 @@ Figure&nbsp;2: The plot above shows how each Google Gemini model vesion used her
 </div>
 <p><a href="#fig-corr" class="quarto-xref">Figure&nbsp;3</a> illustrates that the correlation of privacy scores output by Chat GPT and those output by Gemini is 0.33. If the scores had aligned completely (i.e, <span class="math inline">\(\rho\)</span> of 1), then all the points would have fallen along the gray dotted line. The linear regression line is shown in blue. The points in green correspond to domains in which both models output the same score category, while those in orange diverge. A closer analysis of which sites are over-(under-)evaluated by which model is a natural follow-up to this observation.</p>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in is.na(x): is.na() applied to non-(list or vector) of type 'language'</code></pre>
-</div>
 <div class="cell-output-display">
 <div id="fig-corr" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -311,19 +261,6 @@ Figure&nbsp;3: The scores output by both LLMs clearly have non-zero correlation,
 <h3 data-number="4.2" class="anchored" data-anchor-id="gemini-summary-findings"><span class="header-section-number">4.2</span> Gemini Summary Findings</h3>
 <p>The findings above considered score categories (<code>weak</code>, <code>moderate</code>, and <code>strong</code>), while the plots below show risk levels (<code>low</code>, <code>medium</code>, and <code>high</code>). These two metrics are directionally opposed. In other words, <code>high</code> risk is associated with <code>weak</code> privacy scores.</p>
 <p>Of the ten search queries used to collect data here, Gemini summaries were generated for all but the final two (<code>How to rescue someone who is choking?</code>” and <code>What are the best at-home blood pressure monitors to purchase?</code>).</p>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 652 Columns: 8
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (6): l, query, domain_old, source, domain, top_level_domain
-dbl (2): page, score
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Joining with `by = join_by(query)`</code></pre>
-</div>
-</div>
 <p>Of the 339 unique domains that appeared in the search results accross all 10 queries, PrivacyLens successfully retrieved and scored the privacy policies for 71% of them, illustrating the strong base of domain coverage within PrivacyLens. Due to the same domains appearing in different queries and / or different secctions of the search result within the same query, this coverage encompasses 79% of all the domains in the search result data.</p>
 <p>The fraction of unscored websites appears roughly even across all sources (e.g., <code>gemini_summary</code>, <code>organic_result_page_1</code>, etc.) with the exception of sponsored results. However, because sponsored domains comprise only about 6% of all the domains collected, this discrepancy does not invalidate the following analysis.</p>
 <p>As <a href="#fig-unscored_domains" class="quarto-xref">Figure&nbsp;4</a> suggests, PrivacyLens may have better domain coverage for certain types of queries. Only 11% of the domains in the results to the query <code>How to cope with anxiety?</code> are unscored compared to 38% of the domains in the results for the query <code>How to appeal a denied insurance claim?</code> Because PrivacyLens has an in-built flywheel, domain coverage is poised to grow organically over time.</p>
@@ -427,13 +364,6 @@ Figure&nbsp;9: This plot shows the distribution of PrivacyLens scores by source.
 <!-- ![The proprotion of sites from low-risk domains generally tends to increase as we navigate further from the Gemini summary.](score.gif){width="70%"} -->
 <p>As shown in <a href="#fig-risk-incr" class="quarto-xref">Figure&nbsp;10</a>, as the user navigates away from the Gemini summary, the proportion of high-risk domains shown to her as she navigates successive pages generally tends to increase, as the regression line indicates. The size of the point is proportional to the number of domains shown on the respective page across all search queries.</p>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-ℹ Please use `linewidth` instead.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
 <div class="cell-output-display">
 <div id="fig-risk-incr" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -449,18 +379,6 @@ Figure&nbsp;10: The further away from the Gemini summary the user navigates, the
 </div>
 <p>However, when analyzing results query-by-query, as shown in <a href="#fig-query-breakdown" class="quarto-xref">Figure&nbsp;11</a>, this aggregate trend does not <em>always</em> hold, though eight of the ten plots below have a negative slope. Still, to the extent that a user may accumulate multiple queries over time – as is the case for most users – the aggregate trend may not be spurious.</p>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(source)`
-`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 4 rows containing non-finite outside the scale range
-(`stat_smooth()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 4 rows containing missing values or values outside the scale range
-(`geom_point()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div id="fig-query-breakdown" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
