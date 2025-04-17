@@ -9,8 +9,14 @@ authors:
     corresponding: true
 format:
   html:
+    toc: true
     number-sections: true
     fig-cap-location: bottom
+    code-tools: false
+    code-fold: true
+    # code-summary: "Show code"
+    code-overflow: wrap
+    echo: false   # Hides ALL code by default
   # pdf:
   #   toc: true
   #   number-sections: true

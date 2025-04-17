@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -120,7 +86,7 @@ window.Quarto = {
 
 </head>
 
-<body class="fullcontent">
+<body>
 
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
@@ -152,7 +118,29 @@ window.Quarto = {
     
   
   </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary"><span class="header-section-number">1</span> Executive Summary</a></li>
+  <li><a href="#motivation-and-background" id="toc-motivation-and-background" class="nav-link" data-scroll-target="#motivation-and-background"><span class="header-section-number">2</span> Motivation and Background</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">3</span> Methodology</a>
+  <ul class="collapse">
+  <li><a href="#consistency-check" id="toc-consistency-check" class="nav-link" data-scroll-target="#consistency-check"><span class="header-section-number">3.1</span> Consistency Check</a></li>
+  <li><a href="#gemini-summary-evaluation" id="toc-gemini-summary-evaluation" class="nav-link" data-scroll-target="#gemini-summary-evaluation"><span class="header-section-number">3.2</span> Gemini Summary Evaluation</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">4</span> Results</a>
+  <ul class="collapse">
+  <li><a href="#llm-consistency-results-chat-gpt-vs.-gemini" id="toc-llm-consistency-results-chat-gpt-vs.-gemini" class="nav-link" data-scroll-target="#llm-consistency-results-chat-gpt-vs.-gemini"><span class="header-section-number">4.1</span> LLM Consistency Results: Chat GPT vs.&nbsp;Gemini</a></li>
+  <li><a href="#gemini-summary-findings" id="toc-gemini-summary-findings" class="nav-link" data-scroll-target="#gemini-summary-findings"><span class="header-section-number">4.2</span> Gemini Summary Findings</a></li>
+  </ul></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">5</span> Discussion</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">6</span> Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">7</span> References</a></li>
+  </ul>
+</nav>
+</div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
@@ -160,11 +148,6 @@ window.Quarto = {
 
 
 <div class="cell" data-hide="true">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>&lt;!-- <span class="fu">.quarto-title-block</span> { <span class="va">--</span><span class="op">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;!-- background-color<span class="in">:</span> <span class="pp">#123445</span>; --<span class="op">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>&lt;!-- padding<span class="in">:</span> 20px; --<span class="op">&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>&lt;!-- border-radius<span class="in">:</span> 5px; --<span class="op">&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>&lt;!-- } --<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <style type="text/css">
 <!-- .quarto-title-block { -->
 <!-- background-color: #123445; -->
@@ -174,39 +157,27 @@ window.Quarto = {
 </style>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>here() starts at /Users/vkb/Dropbox/Varoon_Files/git/privacylens-whitepaper</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magick)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Linking to ImageMagick 6.9.12.93
 Enabled features: cairo, fontconfig, freetype, heic, lcms, pango, raw, rsvg, webp
 Disabled features: fftw, ghostscript, x11</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ✔ forcats   1.0.0     ✔ stringr   1.5.1
 ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
 ✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     </code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::combine() masks gridExtra::combine()
 ✖ dplyr::filter()  masks stats::filter()
 ✖ dplyr::lag()     masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_linedraw</span>())</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 12  # Adjust width (default is ~7)</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5  # Adjust height if needed</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig.align: "center"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div style="page-break-after: always;"></div>
 <section id="executive-summary" class="level2" data-number="1">
@@ -274,7 +245,6 @@ Explain why we chose to focus on unique domains
 <h3 data-number="4.1" class="anchored" data-anchor-id="llm-consistency-results-chat-gpt-vs.-gemini"><span class="header-section-number">4.1</span> LLM Consistency Results: Chat GPT vs.&nbsp;Gemini</h3>
 <p>The sample of domains used in this analysis deviates strongly from random. As <a href="#fig-dist" class="quarto-xref">Figure&nbsp;1</a> shows, the distribution of domain scores is even (i.e,. <span class="math inline">\(\frac{1}{3}\)</span> assigned to each category weak, moderate, and strong). Based on the data shown in the plot of scores by model alone (right), it appears as if Chat GPT scores websites more leniently. The proportion of domains scored <code>weak</code> by Gemini (about 38%) is distinctly in the scores output by Gemini relative to those of Chat GPT (about 24%).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>cons_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"consistency_data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 99 Columns: 5
 ── Column specification ────────────────────────────────────────────────────────
@@ -287,40 +257,6 @@ dbl (2): chat_gpt_score, gemini_score
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>scored_df <span class="ot">&lt;-</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>cons_df <span class="sc">|&gt;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">gather</span>(<span class="st">"chat_gpt_score"</span>, <span class="st">"gemini_score"</span>, <span class="at">key =</span> <span class="st">"LLM"</span>, <span class="at">value =</span> <span class="st">"score"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">score_category =</span> <span class="fu">case_when</span>(</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>score <span class="sc">&gt;</span> <span class="dv">56</span> <span class="sc">~</span> <span class="st">"strong"</span>,</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>score <span class="sc">&gt;=</span> <span class="dv">40</span> <span class="sc">&amp;</span> score <span class="sc">&lt;=</span> <span class="dv">56</span> <span class="sc">~</span> <span class="st">"moderate"</span>,</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>score <span class="sc">&lt;</span> <span class="dv">40</span> <span class="sc">~</span> <span class="st">"weak"</span>,</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"NA"</span>  <span class="co"># The default case</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>)) <span class="sc">|&gt;</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">score_category =</span> <span class="fu">factor</span>(score_category,</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"weak"</span>, <span class="st">"moderate"</span>, <span class="st">"strong"</span>),</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="at">ordered =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>scored_llms_df <span class="ot">&lt;-</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>scored_df <span class="sc">|&gt;</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="fu">pivot_wider</span>(<span class="at">names_from =</span> LLM, <span class="at">values_from =</span> <span class="fu">c</span>(score, score_category)) <span class="sc">|&gt;</span></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">match_binary =</span> <span class="fu">case_when</span>(</span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>score_category_chat_gpt_score <span class="sc">==</span>  score_category_gemini_score <span class="sc">~</span> <span class="st">"match"</span>,</span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"no match"</span>  <span class="co"># The default case</span></span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>)) <span class="sc">|&gt;</span></span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">match_detail =</span> <span class="fu">case_when</span>(</span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>score_category_chat_gpt_score <span class="sc">==</span>  score_category_gemini_score <span class="sc">~</span> <span class="st">"match"</span>,</span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>score_category_chat_gpt_score <span class="sc">&gt;</span> score_category_gemini_score <span class="sc">~</span></span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="st">"chat_gpt_higher"</span>,</span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"gemini_higher"</span>  <span class="co"># The default case</span></span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>combined_dist_plots <span class="ot">&lt;-</span> score_dist_plot <span class="sc">+</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>scores_by_model <span class="sc">+</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_layout</span>(<span class="at">ncol =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_linedraw</span>()</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>combined_dist_plots</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-dist" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -336,7 +272,6 @@ Figure&nbsp;1: Privacy score distributions overall (left) and by model (right)
 </div>
 <p>Among scores output by Google Gemini itself, the distribution of score buckets is not even across all model versions, as <a href="#fig-gemini-version" class="quarto-xref">Figure&nbsp;2</a> shows. For instance, Gemini 2.5 Pro appears most lenient, about 80% of domains scored by this version were classified as <code>strong</code>. However, it is possible that the privacy scores of the underlying websites did legitimately differ. To study this phenonenon more closely in the future, the same domain should be scored by different Gemini versions, much in the same way Chat GPT and Gemini are being compared against one another here.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>within_model_score_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-gemini-version" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -352,7 +287,6 @@ Figure&nbsp;2: The plot above shows how each Google Gemini model vesion used her
 </div>
 <p><a href="#fig-corr" class="quarto-xref">Figure&nbsp;3</a> illustrates that the correlation of privacy scores output by Chat GPT and those output by Gemini is 0.33. If the scores had aligned completely (i.e, <span class="math inline">\(\rho\)</span> of 1), then all the points would have fallen along the gray dotted line. The linear regression line is shown in blue. The points in green correspond to domains in which both models output the same score category, while those in orange diverge. A closer analysis of which sites are over-(under-)evaluated by which model is a natural follow-up to this observation.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>llm_corr_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
@@ -378,38 +312,6 @@ Figure&nbsp;3: The scores output by both LLMs clearly have non-zero correlation,
 <p>The findings above considered score categories (<code>weak</code>, <code>moderate</code>, and <code>strong</code>), while the plots below show risk levels (<code>low</code>, <code>medium</code>, and <code>high</code>). These two metrics are directionally opposed. In other words, <code>high</code> risk is associated with <code>weak</code> privacy scores.</p>
 <p>Of the ten search queries used to collect data here, Gemini summaries were generated for all but the final two (<code>How to rescue someone who is choking?</code>” and <code>What are the best at-home blood pressure monitors to purchase?</code>).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>queries <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"What does a rash on my arm mean?"</span>,</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>             <span class="st">"How to cope with anxiety?"</span>,</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>             <span class="st">"How to increase chances</span><span class="sc">\n</span><span class="st"> of getting pregnant?"</span>,</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Tips to live with fibromyalgia"</span>,</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>             <span class="st">"What is intermittent fasting</span><span class="sc">\n</span><span class="st">and how does it work?"</span>,</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>             <span class="st">"What are the benefits of acupuncture?"</span>,</span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>             <span class="st">"What are the steps of a colonoscopy?"</span>,</span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>             <span class="st">"How to appeal a denied insurance claim?"</span>,</span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>             <span class="st">"How to rescue someone who is choking?"</span>,</span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>             <span class="st">"What are the best at-home blood pressure</span><span class="sc">\n</span><span class="st">monitors to purchase?"</span>)</span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>query_df <span class="ot">&lt;-</span> <span class="fu">cbind.data.frame</span>(queries,</span>
-<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="at">query =</span> LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])</span>
-<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>unscored_breakdown_plt <span class="ot">&lt;-</span> </span>
-<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">"gdrive_whitepaper_data.csv"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="fu">distinct</span>() <span class="sc">|&gt;</span></span>
-<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">scored =</span> <span class="fu">ifelse</span>(score <span class="sc">&lt;=</span> <span class="dv">68</span>, <span class="st">"scored"</span>, <span class="st">"not scored"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(query, source) <span class="sc">|&gt;</span></span>
-<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(scored) <span class="sc">|&gt;</span></span>
-<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a><span class="fu">ungroup</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a><span class="fu">left_join</span>(query_df) <span class="sc">|&gt;</span></span>
-<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">queries =</span> <span class="fu">str_wrap</span>(queries, <span class="at">width =</span> <span class="dv">35</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> scored, <span class="at">y =</span> n, <span class="at">fill =</span> queries)) <span class="sc">+</span></span>
-<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a><span class="fu">facet_wrap</span>(queries <span class="sc">~</span> ., <span class="at">nrow =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a><span class="fu">guides</span>(<span class="at">fill =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
-<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a><span class="fu">xlab</span>(<span class="st">"PrivacyLens Scoring Status"</span>) <span class="sc">+</span></span>
-<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a><span class="fu">ylab</span>(<span class="st">"Count"</span>) <span class="sc">+</span></span>
-<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a><span class="fu">ggtitle</span>(<span class="st">"PrivacyLens Scoring Status by Query of Unique Domains"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 652 Columns: 8
 ── Column specification ────────────────────────────────────────────────────────
@@ -426,7 +328,6 @@ Joining with `by = join_by(query)`</code></pre>
 <p>The fraction of unscored websites appears roughly even across all sources (e.g., <code>gemini_summary</code>, <code>organic_result_page_1</code>, etc.) with the exception of sponsored results. However, because sponsored domains comprise only about 6% of all the domains collected, this discrepancy does not invalidate the following analysis.</p>
 <p>As <a href="#fig-unscored_domains" class="quarto-xref">Figure&nbsp;4</a> suggests, PrivacyLens may have better domain coverage for certain types of queries. Only 11% of the domains in the results to the query <code>How to cope with anxiety?</code> are unscored compared to 38% of the domains in the results for the query <code>How to appeal a denied insurance claim?</code> Because PrivacyLens has an in-built flywheel, domain coverage is poised to grow organically over time.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>unscored_breakdown_plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-unscored_domains" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -442,8 +343,6 @@ Figure&nbsp;4: While these results suggest some query-to-query variation, Privac
 </div>
 <p>The distribution of domains per source in Google Search is shown in <a href="#fig-domain-vol-pg" class="quarto-xref">Figure&nbsp;5</a>. Despite the fact that only 8 of the 10 search queries resulted in results with Gemini summaries, the number of domains power Gemini summaries exceeds that of any other organic search result page. A few domains from sponsored results are noted here and disregarded in the rest of the analysis since the volume of sponspored domains is quite small and since we are primarily interested in evaluating the privacy of domains used to power Gemini relative to those in organic Google search results.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot 1</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>domains_vol_by_source</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-domain-vol-pg" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -459,8 +358,6 @@ Figure&nbsp;5: Unique domain volume by source across all 10 health queries
 </div>
 <p>When collecting the data, it was observed that many of the same domains in the Gemini summary appear on page one of the organic search results, suggesting that perhaps Google uses popular sites to power Gemini. For several queries, Gemini used at least half of the domains in the page one organic search results for its AI summaries, as shown in <a href="#fig-gemini-frequent" class="quarto-xref">Figure&nbsp;6</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot 2</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>gemini_overlap_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-gemini-frequent" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -483,8 +380,6 @@ Figure&nbsp;6: Domains occuring in the first page of organic search results are 
 </div>
 <p>The plot below, <a href="#fig-score-by-origin" class="quarto-xref">Figure&nbsp;7</a>, shows how the risk categories of the domains in each of these groups is distributed. Note that plot treats each of these three three groups as mutually exclusive. (To be clear, if a domain appears in both Gemini’s summary and in page one organic search results, the domain belongs to the “Both” category only and not to all three categories.) Doing so allows us to compare these three groups against one another free of the interference of double-counting the same domain in two separate groups.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot 3</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>score_by_origin</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-score-by-origin" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -500,8 +395,6 @@ Figure&nbsp;7: As the plot shows, a majority (over 60%) of domains appearing in 
 </div>
 <p>The distribution of risk categories by search section \ page are shown in <a href="#fig-score-by-pg-seq" class="quarto-xref">Figure&nbsp;8</a>. In no sections of the search results do high-risk domains comprise the majority, which is favorable.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot 4</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>scores_by_pg_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-score-by-pg-seq" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -515,47 +408,8 @@ Figure&nbsp;8: The proportion of domains belgonging to each risk category by Goo
 </div>
 </div>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>scoring_trend_df <span class="ot">&lt;-</span> whitepaper_df <span class="sc">|&gt;</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">source =</span> <span class="fu">recode</span>(source,</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="st">"gemini_summary"</span> <span class="ot">=</span> <span class="st">"Gemini Summary"</span>,</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="st">"organic_result_page_1"</span> <span class="ot">=</span> <span class="st">"Page 1 Organic"</span>,</span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="st">"organic_result_page_2"</span> <span class="ot">=</span> <span class="st">"Page 2 Organic"</span>,</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="st">"organic_result_page_3"</span> <span class="ot">=</span> <span class="st">"Page 3 Organic"</span>,</span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="st">"organic_result_page_4"</span> <span class="ot">=</span> <span class="st">"Page 4 Organic"</span>,</span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="st">"organic_result_page_5"</span> <span class="ot">=</span> <span class="st">"Page 5 Organic"</span>,</span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="st">"sponsored"</span> <span class="ot">=</span> <span class="st">"Sponsored"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(source) <span class="sc">|&gt;</span></span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="fu">summarise</span>(<span class="at">median_score =</span> <span class="fu">median</span>(score),</span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="at">num_domains =</span> <span class="fu">n_distinct</span>(domain)) <span class="sc">|&gt;</span></span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ungroup</span>() <span class="sc">|&gt;</span></span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">group_num =</span> <span class="fu">as.numeric</span>(<span class="fu">factor</span>(source))) <span class="sc">|&gt;</span></span>
-<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(source <span class="sc">!=</span> <span class="st">"Sponsored"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">source =</span> <span class="fu">str_wrap</span>(source, <span class="at">width =</span> <span class="dv">10</span>))</span>
-<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>scoring_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(median_score <span class="sc">~</span> group_num, <span class="at">data =</span> scoring_trend_df)</span>
-<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>trend_plot <span class="ot">&lt;-</span> whitepaper_df <span class="sc">|&gt;</span></span>
-<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">source =</span> <span class="fu">recode</span>(source,</span>
-<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a><span class="st">"gemini_summary"</span> <span class="ot">=</span> <span class="st">"Gemini Summary"</span>,</span>
-<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a><span class="st">"organic_result_page_1"</span> <span class="ot">=</span> <span class="st">"Page 1 Organic"</span>,</span>
-<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a><span class="st">"organic_result_page_2"</span> <span class="ot">=</span> <span class="st">"Page 2 Organic"</span>,</span>
-<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a><span class="st">"organic_result_page_3"</span> <span class="ot">=</span> <span class="st">"Page 3 Organic"</span>,</span>
-<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a><span class="st">"organic_result_page_4"</span> <span class="ot">=</span> <span class="st">"Page 4 Organic"</span>,</span>
-<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a><span class="st">"organic_result_page_5"</span> <span class="ot">=</span> <span class="st">"Page 5 Organic"</span>,</span>
-<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a><span class="st">"sponsored"</span> <span class="ot">=</span> <span class="st">"Sponsored"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb25-29"><a href="#cb25-29" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">source =</span> <span class="fu">str_wrap</span>(source, <span class="at">width =</span> <span class="dv">10</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(source <span class="sc">!=</span> <span class="st">"Sponsored"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb25-31"><a href="#cb25-31" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> source, <span class="at">y =</span> score, <span class="at">fill =</span> source)) <span class="sc">+</span></span>
-<span id="cb25-32"><a href="#cb25-32" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb25-33"><a href="#cb25-33" aria-hidden="true" tabindex="-1"></a><span class="fu">guides</span>(<span class="at">fill =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
-<span id="cb25-34"><a href="#cb25-34" aria-hidden="true" tabindex="-1"></a><span class="fu">xlab</span>(<span class="st">"Search Result Source"</span>) <span class="sc">+</span></span>
-<span id="cb25-35"><a href="#cb25-35" aria-hidden="true" tabindex="-1"></a><span class="fu">ylab</span>(<span class="st">"Score"</span>) <span class="sc">+</span></span>
-<span id="cb25-36"><a href="#cb25-36" aria-hidden="true" tabindex="-1"></a><span class="fu">ggtitle</span>(<span class="st">"PrivacyLens Score by Source"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>As <a href="#fig-trend-plot" class="quarto-xref">Figure&nbsp;9</a> suggests, privacy scores are roughly consistent from one section of the search results to the next. There may be some evidence that privacy scores decrease as one navigates away from the Gemini summary / page one, but few users likely reach pages 4 and 5.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>trend_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-trend-plot" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -570,52 +424,9 @@ Figure&nbsp;9: This plot shows the distribution of PrivacyLens scores by source.
 </div>
 </div>
 <!-- Individual, page-by-page comparisons are easier to discern in the plot below. The high risk category generally decreases, while the low category generally increases. -->
-<div class="cell" data-skip="true">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># imgs &lt;- list.files(path = "score-gif", pattern = "*.png", full.names = TRUE) |&gt;</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="co"># lapply(image_read) |&gt;    # Read images</span></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="co"># image_join() |&gt;          # Combine into an animation</span></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co"># image_animate(fps = 1)  # Adjust frames per second (fps)</span></span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the GIF</span></span>
-<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co"># image_write(imgs, "score.gif")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <!-- ![The proprotion of sites from low-risk domains generally tends to increase as we navigate further from the Gemini summary.](score.gif){width="70%"} -->
 <p>As shown in <a href="#fig-risk-incr" class="quarto-xref">Figure&nbsp;10</a>, as the user navigates away from the Gemini summary, the proportion of high-risk domains shown to her as she navigates successive pages generally tends to increase, as the regression line indicates. The size of the point is proportional to the number of domains shown on the respective page across all search queries.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>whitepaper_df <span class="sc">|&gt;</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">distinct</span>() <span class="sc">|&gt;</span></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(<span class="sc">!</span>source <span class="sc">%in%</span> <span class="st">"sponsored"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">source =</span> <span class="fu">recode</span>(source,</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="st">"gemini_summary"</span> <span class="ot">=</span> <span class="st">"Gemini Summary"</span>,</span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="st">"organic_result_page_1"</span> <span class="ot">=</span> <span class="st">"Page 1 Organic"</span>,</span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="st">"organic_result_page_2"</span> <span class="ot">=</span> <span class="st">"Page 2 Organic"</span>,</span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="st">"organic_result_page_3"</span> <span class="ot">=</span> <span class="st">"Page 3 Organic"</span>,</span>
-<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="st">"organic_result_page_4"</span> <span class="ot">=</span> <span class="st">"Page 4 Organic"</span>,</span>
-<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="st">"organic_result_page_5"</span> <span class="ot">=</span> <span class="st">"Page 5 Organic"</span>,</span>
-<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="st">"sponsored"</span> <span class="ot">=</span> <span class="st">"Sponsored"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(source) <span class="sc">|&gt;</span></span>
-<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(privacylens_risk) <span class="sc">|&gt;</span></span>
-<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(source) <span class="sc">|&gt;</span></span>
-<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">total_n =</span> <span class="fu">sum</span>(n)) <span class="sc">|&gt;</span></span>
-<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="fu">ungroup</span>() <span class="sc">|&gt;</span></span>
-<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> total_n) <span class="sc">|&gt;</span></span>
-<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(source) <span class="sc">|&gt;</span></span>
-<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(privacylens_risk <span class="sc">==</span> <span class="st">"High"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a><span class="fu">ungroup</span>() <span class="sc">|&gt;</span></span>
-<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">x_marker =</span> <span class="fu">row_number</span>()) <span class="sc">|&gt;</span></span>
-<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a><span class="co"># filter(source %in% c("Gemini Summary", "Page 1 Organic", "Page 2 Organic")) |&gt; </span></span>
-<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x_marker, <span class="at">y =</span> prop, <span class="at">size =</span> total_n)) <span class="sc">+</span></span>
-<span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">"#c84c09"</span>) <span class="sc">+</span></span>
-<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">size =</span> <span class="dv">1</span>,</span>
-<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a><span class="at">color =</span> <span class="st">"#420217"</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>, <span class="at">fill =</span> <span class="st">"lightblue"</span>) <span class="sc">+</span></span>
-<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">percent_format</span>()) <span class="sc">+</span></span>
-<span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a><span class="fu">ggtitle</span>(<span class="st">"Proportion of High-Privacy-Risk Domains by Source"</span>) <span class="sc">+</span></span>
-<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_size</span>(<span class="at">name =</span> <span class="st">"Total Domains"</span>) <span class="sc">+</span></span>
-<span id="cb28-30"><a href="#cb28-30" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Source"</span>, <span class="at">y =</span> <span class="st">"Proportion of High-Risk Privacy Domains"</span>) <span class="sc">+</span></span>
-<span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>), <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>)) <span class="sc">+</span></span>
-<span id="cb28-32"><a href="#cb28-32" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>),</span>
-<span id="cb28-33"><a href="#cb28-33" aria-hidden="true" tabindex="-1"></a><span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Gemini</span><span class="sc">\n</span><span class="st">Summary"</span>, <span class="st">"Page 1</span><span class="sc">\n</span><span class="st">Organic"</span>, <span class="st">"Page 2</span><span class="sc">\n</span><span class="st">Organic"</span>, <span class="st">"Page 3</span><span class="sc">\n</span><span class="st">Organic"</span>, <span class="st">"Page 4</span><span class="sc">\n</span><span class="st">Organic"</span>, <span class="st">"Page 5</span><span class="sc">\n</span><span class="st">Organic"</span>)) <span class="sc">+</span></span>
-<span id="cb28-34"><a href="#cb28-34" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_linedraw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
 ℹ Please use `linewidth` instead.</code></pre>
@@ -638,57 +449,6 @@ Figure&nbsp;10: The further away from the Gemini summary the user navigates, the
 </div>
 <p>However, when analyzing results query-by-query, as shown in <a href="#fig-query-breakdown" class="quarto-xref">Figure&nbsp;11</a>, this aggregate trend does not <em>always</em> hold, though eight of the ten plots below have a negative slope. Still, to the extent that a user may accumulate multiple queries over time – as is the case for most users – the aggregate trend may not be spurious.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>xval_df <span class="ot">&lt;-</span> <span class="fu">cbind.data.frame</span>(<span class="at">x_val =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>),</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="at">source =</span> <span class="fu">c</span>(<span class="st">"Gemini Summary"</span>, <span class="st">"Page 1 Organic"</span>, <span class="st">"Page 2 Organic"</span>, <span class="st">"Page 3 Organic"</span>, <span class="st">"Page 4 Organic"</span>, <span class="st">"Page 5 Organic"</span>))</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>whitepaper_df <span class="sc">|&gt;</span></span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>source <span class="sc">%in%</span> <span class="st">"sponsored_result"</span>)<span class="sc">|&gt;</span></span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">source =</span> <span class="fu">recode</span>(source,</span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"gemini_summary"</span> <span class="ot">=</span> <span class="st">"Gemini Summary"</span>,</span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"organic_result_page_1"</span> <span class="ot">=</span> <span class="st">"Page 1 Organic"</span>,</span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"organic_result_page_2"</span> <span class="ot">=</span> <span class="st">"Page 2 Organic"</span>,</span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"organic_result_page_3"</span> <span class="ot">=</span> <span class="st">"Page 3 Organic"</span>,</span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"organic_result_page_4"</span> <span class="ot">=</span> <span class="st">"Page 4 Organic"</span>,</span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"organic_result_page_5"</span> <span class="ot">=</span> <span class="st">"Page 5 Organic"</span>,</span>
-<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"sponsored_result"</span> <span class="ot">=</span> <span class="st">"Sponsored"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(query, source) <span class="sc">|&gt;</span></span>
-<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(privacylens_risk) <span class="sc">|&gt;</span></span>
-<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(query, source) <span class="sc">|&gt;</span></span>
-<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">total_n =</span> <span class="fu">sum</span>(n)) <span class="sc">|&gt;</span></span>
-<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">|&gt;</span></span>
-<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> total_n) <span class="sc">|&gt;</span></span>
-<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(query, source) <span class="sc">|&gt;</span></span>
-<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(privacylens_risk <span class="sc">==</span> <span class="st">"High"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">|&gt;</span></span>
-<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(query) <span class="sc">|&gt;</span></span>
-<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(xval_df) <span class="sc">|&gt;</span></span>
-<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">|&gt;</span></span>
-<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">query =</span> <span class="fu">recode</span>(query,</span>
-<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"A"</span> <span class="ot">=</span> queries[<span class="dv">1</span>],</span>
-<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"B"</span> <span class="ot">=</span> queries[<span class="dv">2</span>],</span>
-<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"C"</span> <span class="ot">=</span> queries[<span class="dv">3</span>],</span>
-<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"D"</span> <span class="ot">=</span> queries[<span class="dv">4</span>],</span>
-<span id="cb31-32"><a href="#cb31-32" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"E"</span> <span class="ot">=</span> queries[<span class="dv">5</span>],</span>
-<span id="cb31-33"><a href="#cb31-33" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"F"</span> <span class="ot">=</span> queries[<span class="dv">6</span>],</span>
-<span id="cb31-34"><a href="#cb31-34" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"G"</span> <span class="ot">=</span> queries[<span class="dv">7</span>],</span>
-<span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"H"</span> <span class="ot">=</span> queries[<span class="dv">8</span>],</span>
-<span id="cb31-36"><a href="#cb31-36" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"I"</span> <span class="ot">=</span> queries[<span class="dv">9</span>],</span>
-<span id="cb31-37"><a href="#cb31-37" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"J"</span> <span class="ot">=</span> queries[<span class="dv">10</span>])) <span class="sc">|&gt;</span></span>
-<span id="cb31-38"><a href="#cb31-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x_val, <span class="at">y =</span> prop, <span class="at">size =</span> total_n, <span class="at">col =</span> query)) <span class="sc">+</span></span>
-<span id="cb31-39"><a href="#cb31-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb31-40"><a href="#cb31-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">size =</span> <span class="dv">1</span>,</span>
-<span id="cb31-41"><a href="#cb31-41" aria-hidden="true" tabindex="-1"></a>              <span class="at">color =</span> <span class="st">"gray"</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb31-42"><a href="#cb31-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(query<span class="sc">~</span>.) <span class="sc">+</span></span>
-<span id="cb31-43"><a href="#cb31-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>),</span>
-<span id="cb31-44"><a href="#cb31-44" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Gem.</span><span class="sc">\n</span><span class="st">Sum."</span>, <span class="st">"Pg.</span><span class="sc">\n</span><span class="st">1"</span>, <span class="st">"Pg.</span><span class="sc">\n</span><span class="st">2"</span>, <span class="st">"Pg.</span><span class="sc">\n</span><span class="st">3"</span>, <span class="st">"Pg.</span><span class="sc">\n</span><span class="st">4"</span>, <span class="st">"Pg.</span><span class="sc">\n</span><span class="st">5"</span>)) <span class="sc">+</span></span>
-<span id="cb31-45"><a href="#cb31-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
-<span id="cb31-46"><a href="#cb31-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(<span class="at">name =</span> <span class="st">"Total Domains"</span>) <span class="sc">+</span></span>
-<span id="cb31-47"><a href="#cb31-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Proportion of High-Risk Privacy Domains by Query and Source"</span>) <span class="sc">+</span></span>
-<span id="cb31-48"><a href="#cb31-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">percent_format</span>()) <span class="sc">+</span></span>
-<span id="cb31-49"><a href="#cb31-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
-<span id="cb31-50"><a href="#cb31-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Proportion of High-Risk Privacy Domains"</span>) <span class="sc">+</span></span>
-<span id="cb31-51"><a href="#cb31-51" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Joining with `by = join_by(source)`
 `geom_smooth()` using formula = 'y ~ x'</code></pre>
@@ -722,20 +482,6 @@ Figure&nbsp;11: When analyzing the above trend query-by-query, this aggregate fi
 <p>Additionally, Gemini appears to generate summaries from domains with comparable privacy scores compared to domains that appear in Google’s organic search results (pages 1 through 5). Given the fact that the number of domains used to power Gemini is larger than the number of domains on any other page and that domains powering Gemini receive more clicks, as Google has published, there seems to be evidence that Google could improve the privacy risks to which it exposes its users by taking more proactive privacy-related metrics into account when ranking websites. There appears to be strong evidence that many page-one organic search result domains are used in Gemini summaries.</p>
 <p>Future improvements to this work include addressing some of the methodological challenges (including an evaluation of these results using domain counts weighted by their frequency in search result pages), sampling a more representative group of domains, inspecting patterns in which domains are scored favorably by which LLMs, and conducting a proper validation study in which gold standard scores from experts can be compared against LLM outputs. A closer inspection at patterns among top-level domains, as shown in <a href="#fig-tld-risks" class="quarto-xref">Figure&nbsp;12</a> below, is an avenue for future research, as is assessing how these results adapt when accounting for the 29% of domains PrivacyLens failed to auto-score.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>whitepaper_df <span class="sc">|&gt;</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(top_level_domain <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"com"</span>, <span class="st">"org"</span>, <span class="st">"gov"</span>, <span class="st">"edu"</span>, <span class="st">"au"</span>, <span class="st">"uk"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(top_level_domain, privacylens_risk) <span class="sc">|&gt;</span></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(privacylens_risk) <span class="sc">|&gt;</span></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> privacylens_risk, <span class="at">y =</span> n, <span class="at">fill =</span> top_level_domain)) <span class="sc">+</span></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="fu">facet_wrap</span>(top_level_domain <span class="sc">~</span> ., <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"Paired"</span>) <span class="sc">+</span></span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="fu">xlab</span>(<span class="st">"PrivacyLens Risk"</span>) <span class="sc">+</span></span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ylab</span>(<span class="st">"Proportion of Domains"</span>) <span class="sc">+</span></span>
-<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(</span>
-<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="st">"Distribution of Privacy Risk by Top-Level Domain"</span>,</span>
-<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="at">subtitle =</span> <span class="st">"Top-Level Domains with ≥ 10 domains in data"</span>) <span class="sc">+</span></span>
-<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a><span class="fu">guides</span>(<span class="at">fill =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-tld-risks" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
