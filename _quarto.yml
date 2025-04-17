@@ -1,0 +1,34 @@
+project:
+  output-dir: docs
+title: Consistency Assessment and Gemini Evaluation 
+authors:
+  - name: The PrivacyLens Team
+    affiliation: School of Information, UC Berkeley
+    roles: writing
+    corresponding: true
+format:
+  html:
+    number-sections: true
+    fig-cap-location: bottom
+    toc: true
+    code-tools: false
+    code-fold: false
+    echo: false
+    lightbox: true
+editor_options:
+  chunk_output_type: console
+  title-block-banner: true
+  # pdf:
+  #   toc: true
+  #   number-sections: true
+  #   colorlinks: true
+  #   shift-heading-level-by: -1
+  #   links-as-notes: false
+execute:
+    fig-width: 12  # Adjust width (default is ~7)
+    fig-height: 5  # Adjust height if needed
+    fig.align: "center"
+    echo: false
+    warning: false
+    message: false
+bibliography: references.bib
